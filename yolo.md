@@ -719,3 +719,23 @@ Transformer无法得到先验信息，解决方法：通过更大规模的预训
 
 ​		Attention机制发生在Target的元素Query和Source中的所有元素之间。而Self Attention顾名思义，指的不是Target和Source之间的Attention机制，而是Source内部元素之间或者Target内部元素之间发生的Attention机制，也可以理解为Target=Source这种特殊情况下的注意力计算机制。
 
+# 第六章 服务器相关
+
+## 6.1 上传文件
+
+1.本地文件上传至服务器
+
+```
+scp 本地文件路径 用户名@ip 用户名下路径
+scp C:/test gxzhou@10.10.23.163 xuzhuobin/   (地址从用户名下开始)
+scp C:/test gxzhou@10.10.23.163 /home/gxzhou/xuzhuobin/  (地址从home开始)
+```
+
+2.本地目录上传至服务器
+
+```
+scp 本地目录路径 用户名@ip 用户名下路径
+scp C:/test/ gxzhou@10.10.23.163 xuzhuobin/   (地址从用户名下开始)
+scp C:/test/ gxzhou@10.10.23.163 /home/gxzhou/xuzhuobin/  (地址从home开始)
+```
+
