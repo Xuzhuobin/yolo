@@ -727,15 +727,28 @@ Transformer无法得到先验信息，解决方法：通过更大规模的预训
 
 ```
 scp 本地文件路径 用户名@ip 用户名下路径
-scp C:/test gxzhou@10.10.23.163 xuzhuobin/   (地址从用户名下开始)
-scp C:/test gxzhou@10.10.23.163 /home/gxzhou/xuzhuobin/  (地址从home开始)
+scp C:/test gxzhou@10.10.23.163:xuzhuobin/   (地址从用户名下开始)
+scp C:/test gxzhou@10.10.23.163:/home/gxzhou/xuzhuobin/  (地址从home开始)
 ```
 
 2.本地目录上传至服务器
 
 ```
-scp 本地目录路径 用户名@ip 用户名下路径
-scp C:/test/ gxzhou@10.10.23.163 xuzhuobin/   (地址从用户名下开始)
-scp C:/test/ gxzhou@10.10.23.163 /home/gxzhou/xuzhuobin/  (地址从home开始)
+scp -r 本地目录路径 用户名@ip 用户名下路径
+scp -r C:/test/ gxzhou@10.10.23.163:xuzhuobin/   (地址从用户名下开始)
+scp -r C:/test/ gxzhou@10.10.23.163:/home/gxzhou/xuzhuobin/  (地址从home开始)
 ```
 
+## 6.2 下载文件
+
+1.服务器文件下载至本地
+
+```
+scp 用户名@ip用户名下路径 本地文件路径
+```
+
+2.服务器目录下载至本地
+
+```
+scp -r 用户名@ip用户名下路径 本地目录路径
+```
